@@ -33,4 +33,5 @@ for episode in range(episodes):
 
     print(f"Episode {episode + 1}/{episodes} completed")
 
+model.save("2d_pipe_model.h5")
 print("Training completed")

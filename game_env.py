@@ -15,7 +15,7 @@ class PixelLineGameEnv(gym.Env):
 
     def step(self, action):
         self.game.step(action)
-        done = self.game.current_pos == self.game.end_pos
+        done = self.game.current_pos == self.game.end_pos #TODO: add this back into the game itself
         reward = -np.linalg.norm(np.array(self.game.current_pos) - np.array(self.game.end_pos)) / 100
         self.game.render()
         return self._get_observation(), reward, done, {}

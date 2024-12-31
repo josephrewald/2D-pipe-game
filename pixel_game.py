@@ -4,7 +4,7 @@ import sys
 class PixelGame:
     def __init__(self):
         pygame.init()
-        self.width, self.height = 800, 600
+        self.width, self.height = 200, 200
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Pixel Line Drawing Game")
 
@@ -18,9 +18,9 @@ class PixelGame:
         self.reset()
 
     def reset(self):
-        self.start_pos = [50, 50]
+        self.start_pos = [20, 20]
         self.current_pos = self.start_pos.copy()
-        self.end_pos = [700, 500]
+        self.end_pos = [90, 90]
         self.line = [tuple(self.start_pos)]
 
     def step(self, action):
